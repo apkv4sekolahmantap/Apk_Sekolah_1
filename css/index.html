@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light" data-bs-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#7C3AED">
+<title>Apk Sekolah Mantap</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237C3AED'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/style.css?v=4.7">
+<script src="js/config.js?v=4.7"></script>
+</head>
+<body>
+<div id="boot" class="boot"><div class="text-center"><div class="spinner-border text-primary" role="status"></div><div style="margin-top:12px;font:14px sans-serif;color:#475569">Memuat aplikasi&#8230;</div></div></div>
+
+<!-- LANDING + LOGIN -->
+<div id="loginView" class="lp d-none">
+  <header class="lp-nav">
+    <a class="lp-brand" href="#top"><span class="lp-logo"><i class="bi bi-journal-bookmark-fill"></i></span><span><b>Apk Sekolah Mantap</b><small>SDN 047 Tarakan</small></span></a>
+    <nav class="lp-links" aria-label="Navigasi">
+      <a href="#fitur">Fitur</a><a href="#peran">Untuk siapa</a>
+      <button type="button" class="lp-btn" onclick="lpMasuk(true)">Masuk</button>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="lp-hero">
+      <div class="lp-copy">
+        <p class="lp-tag"><i></i> Khusus pengguna terdaftar</p>
+        <h1>Administrasi sekolah yang rapi, dari presensi sampai rapor.</h1>
+        <p class="lp-sub">Satu aplikasi untuk guru, tata usaha, dan orang tua: presensi QR, nilai Kurikulum Merdeka, laporan kehadiran siap cetak, dan keuangan sekolah.</p>
+        <div class="lp-cta"><button type="button" class="lp-btn lp-lg" onclick="lpMasuk(true)">Masuk ke aplikasi</button><a class="lp-ghost" href="#fitur">Lihat fitur</a></div>
+        <p class="lp-note"><i></i> Server aktif &middot; data tersimpan di Google Sheets sekolah</p>
+      </div>
+      <div class="lp-visual" aria-hidden="true">
+        <div class="lp-mock">
+          <div class="lp-mh"><b>Kehadiran hari ini</b><span>Kelas 4-A</span></div>
+          <div class="lp-stats"><div><strong>92%</strong><small>Hadir</small></div><div><strong>4%</strong><small>Izin</small></div><div><strong>3%</strong><small>Sakit</small></div><div><strong>1%</strong><small>Alpa</small></div></div>
+          <ul class="lp-list"><li><span>Aisyah Putri</span><em class="ok">Hadir</em></li><li><span>Bima Pratama</span><em class="ok">Hadir</em></li><li><span>Citra Lestari</span><em class="iz">Izin</em></li><li><span>Dimas Saputra</span><em class="sk">Sakit</em></li></ul>
+          <div class="lp-mf">Contoh tampilan &middot; data fiktif</div>
+        </div>
+        <div class="lp-chip"><i class="bi bi-qr-code-scan"></i> Scan QR Presensi</div>
+      </div>
+    </section>
+    <section id="fitur" class="lp-sec">
+      <h2>Yang dikerjakan aplikasi ini</h2>
+      <div class="lp-grid">
+        <div><i class="bi bi-qr-code-scan"></i><h3>Presensi QR dan wajah</h3><p>Guru dan siswa tercatat dalam hitungan detik, orang tua menerima kabar lewat WhatsApp.</p></div>
+        <div><i class="bi bi-file-earmark-bar-graph"></i><h3>Laporan kehadiran</h3><p>Pilih periode, cetak A4, atau unduh Word, Excel, dan PDF dengan tanda tangan otomatis.</p></div>
+        <div><i class="bi bi-grid-3x3-gap"></i><h3>Input nilai</h3><p>Formatif, sumatif, dan nilai akhir Kurikulum Merdeka dihitung otomatis; tempel langsung dari Excel.</p></div>
+        <div><i class="bi bi-person-vcard"></i><h3>Kartu pelajar QR</h3><p>Cetak identitas siswa depan dan belakang, 8 kartu per lembar A4.</p></div>
+        <div><i class="bi bi-wallet2"></i><h3>Keuangan sekolah</h3><p>Pembayaran, tabungan, kas, dan honorarium tercatat dalam satu tempat.</p></div>
+        <div><i class="bi bi-controller"></i><h3>Game edukatif</h3><p>Latihan membaca, berhitung, dan Kuis Bais untuk dua pemain di dua HP.</p></div>
+      </div>
+    </section>
+    <section id="peran" class="lp-sec lp-alt">
+      <h2>Setiap orang melihat bagiannya sendiri</h2>
+      <dl class="lp-roles">
+        <div><dt>Wali kelas dan guru</dt><dd>Mengelola presensi, nilai, dan jurnal untuk kelas yang diampu.</dd></div>
+        <div><dt>Tata usaha dan kepala sekolah</dt><dd>Memantau data siswa, keuangan, surat, dan laporan.</dd></div>
+        <div><dt>Orang tua</dt><dd>Melihat kehadiran, nilai, dan perkembangan anak dengan akun dari nomor HP.</dd></div>
+      </dl>
+    </section>
+  </main>
+  <footer class="lp-foot"><span>&copy; SDN 047 Tarakan</span><button type="button" class="lp-link" onclick="toggleTheme()"><i class="bi bi-circle-half"></i> Terang / Gelap</button><span id="ver"></span></footer>
+
+  <div id="lpModal" class="lp-modal" onclick="if(event.target===this)lpMasuk(false)">
+    <form class="lp-card" onsubmit="doLoginUI(event)" role="dialog" aria-labelledby="lpT">
+      <button type="button" class="lp-x" onclick="lpMasuk(false)" aria-label="Tutup"><i class="bi bi-x-lg"></i></button>
+      <h2 id="lpT">Masuk</h2><p>Gunakan akun yang diberikan sekolah.</p>
+      <label for="lu">Username</label><input id="lu" autocomplete="username" required>
+      <label for="lp">Password</label><input id="lp" type="password" autocomplete="current-password" required>
+      <button id="btnLogin" class="lp-btn lp-full" type="submit"><i class="bi bi-box-arrow-in-right"></i> Masuk</button>
+    </form>
+  </div>
+</div>
+
+<!-- APLIKASI (disembunyikan sampai login) -->
+<div id="appView" class="d-none">
+  <nav id="sidebar" class="sidebar" aria-label="Menu utama">
+    <div class="sb-head"><div class="logo-img brand-ic"><i class="bi bi-journal-bookmark-fill"></i></div>
+      <div><div class="fw-bold lh-1" id="sbName">SDN 047 Tarakan</div><small class="text-secondary" id="sbSub">Apk Sekolah Mantap</small></div></div>
+    <ul id="nav" class="sb-nav"></ul>
+    <div class="sb-foot">
+      <div class="small mb-2 d-flex gap-2 align-items-center"><div class="avatar" id="uPhoto"></div><div><div class="fw-bold" id="uName"></div><div class="text-secondary" id="uRole"></div></div></div>
+      <div class="d-flex gap-2">
+        <button class="btn btn-outline-secondary flex-fill" onclick="toggleTheme()" aria-label="Ganti tema"><i class="bi bi-circle-half"></i></button>
+        <button class="btn btn-outline-danger flex-fill" onclick="logout()"><i class="bi bi-box-arrow-left"></i> Keluar</button>
+      </div>
+    </div>
+  </nav>
+  <div id="ov" class="sb-ov" onclick="toggleSb()"></div>
+  <div id="progress"></div>
+  <main class="main">
+    <header class="topbar">
+      <button class="btn btn-light d-lg-none" onclick="toggleSb()" aria-label="Buka menu"><i class="bi bi-list fs-5"></i></button>
+      <h1 id="pageTitle" class="h4 fw-extra m-0"></h1>
+      <select id="taSel" class="form-select form-select-sm w-auto ms-auto d-none" aria-label="Tahun Ajaran" onchange="gantiTA(this.value)"></select>
+    </header>
+    <div id="app-container"></div>
+  </main>
+  <nav id="bnav" class="bnav d-lg-none" aria-label="Menu cepat"></nav>
+</div>
+
+<div id="pubView" class="d-none"></div>
+<div class="offcanvas offcanvas-end" id="drw" tabindex="-1" style="width:min(480px,100vw)"><div class="offcanvas-header"><div><h2 class="h5 m-0"><i class="bi bi-shield-check text-primary"></i> Verifikasi Integritas & Audit</h2><code class="small" id="drwSub"></code></div><button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Tutup"></button></div>
+<div class="offcanvas-body" id="drwBody"></div><div class="p-3 border-top"><div id="drwStat" class="mb-2"></div><div class="d-flex flex-wrap gap-2"><button class="btn btn-pri flex-grow-1" onclick="dl(S.di)"><i class="bi bi-download"></i> Unduh Ulang</button><button class="btn btn-outline-primary" onclick="reverify()"><i class="bi bi-arrow-repeat"></i> Verifikasi Ulang</button><button class="btn btn-outline-secondary" onclick="showCert(S.di)"><i class="bi bi-patch-check"></i> Sertifikat</button><button class="btn btn-outline-secondary" onclick="cp(S.dUrl)"><i class="bi bi-link-45deg"></i> Salin Tautan</button></div></div></div>
+<!-- Modal tunggal: form, pratinjau, QR, konfirmasi, hasil impor -->
+<div class="modal fade" id="mdl" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" id="mdlDlg"><div class="modal-content">
+  <div class="modal-header"><h2 class="modal-title h5" id="mdlTitle"></h2><button class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
+  <div class="modal-body" id="mdlBody"></div><div class="modal-footer" id="mdlFoot"></div>
+</div></div></div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:2000">
+  <div id="toast" class="toast" role="alert"><div class="d-flex"><div class="toast-body" id="toastBody"></div><button class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Tutup"></button></div></div>
+</div>
+<div id="faceView" class="d-none" role="dialog" aria-label="Presensi wajah"></div>
+<div id="printArea"></div>
+
+
+<script src="js/app.js?v=4.7"></script>
+<script src="js/games.js?v=4.7"></script>
+<script src="js/tools.js?v=4.7"></script>
+<script src="js/modules.js?v=4.7"></script>
+<script src="js/pages.js?v=4.7"></script>
+<script src="js/kenaikan-kelas.js?v=4.7"></script>
+<script src="js/v41.js?v=4.7"></script>
+<script src="js/nilai-grid.js?v=4.7"></script>
+<script src="js/bais.js?v=4.7"></script>
+<script src="js/games4.js?v=4.7"></script>
+<script src="js/v43.js?v=4.7"></script>
+<script src="js/v45.js?v=4.7"></script>
+</body>
+</html>
